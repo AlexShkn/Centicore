@@ -46,15 +46,24 @@
 }
 
 .section-pt {
-	@include adaptiveValue('padding-top', 80, 32);
+	@include adaptiveValue('padding-top', 80, 40);
 }
 .section-pb {
 	@include adaptiveValue('padding-bottom', 175, 95);
 }
 
+.section-mt {
+	@include adaptiveValue('margin-top', -100, -40);
+}
+
+.section-br {
+	border-radius: rem(50) rem(50) 0 0;
+}
+
 .section-title {
 	font-weight: 700;
 	@include adaptiveValue('font-size', 50, 24);
+	line-height: 29px;
 
 	&--darken {
 		color: var(--color-main);

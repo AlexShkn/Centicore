@@ -17,8 +17,7 @@
 		align-items: center;
 		min-height: rem(109);
 		justify-content: space-between;
-		padding-right: rem(15);
-		padding-left: rem(15);
+		padding: 0 rem(16);
 		transition: all 0.3s ease 0s;
 		@media (max-width: rem(1280)) {
 			justify-content: stretch;
