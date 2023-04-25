@@ -10,6 +10,7 @@
 	background-color: var(--color-accent);
 	color: #ffffff;
 	padding: rem(18) rem(10);
+	width: 100%;
 
 	@media (max-width: rem(1280)) {
 		font-size: rem(14);
@@ -29,7 +30,6 @@
 		display: block;
 		margin: 0px auto;
 		max-width: rem(548);
-		width: 100%;
 	}
 	&--asymmetry {
 		border-radius: 8px 0px 8px 0px;
@@ -37,12 +37,13 @@
 	&--rounded {
 		border-radius: em(40);
 	}
-	&--right-min {
+	&--right {
 		border-radius: 0 em(40) em(40) 0px;
+		max-width: rem(452);
 	}
-	&--right-big {
-		border-radius: 0 em(40) em(40) 0px;
-	}
+	// &--right-big {
+	// 	border-radius: 0 em(40) em(40) 0px;
+	// }
 }
 
 .section-pt {

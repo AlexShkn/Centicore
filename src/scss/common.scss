@@ -3,7 +3,6 @@
 
 	&__text {
 		font-size: rem(18);
-
 		line-height: math.div(27, 18);
 		color: var(--color-main);
 		&:not(:last-child) {
