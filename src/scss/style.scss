@@ -93,8 +93,8 @@ body {
 			@if ($maxWidthContainer>0) {
 				padding-top: 0;
 				padding-bottom: 0;
-				@include adaptiveValue('padding-right', 50, 15);
-				@include adaptiveValue('padding-left', 50, 15);
+				@include adaptiveValue('padding-right', 40, 15);
+				@include adaptiveValue('padding-left', 40, 15);
 			} @else {
 				@include adaptiveValue(
 					'padding-left',
@@ -145,6 +145,7 @@ body {
 @import './parts/expertise';
 @import './parts/benefits';
 @import './parts/consultation';
+@import './parts/outstaffing';
 //===========MAIN===============================================
 @import 'footer';
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==============

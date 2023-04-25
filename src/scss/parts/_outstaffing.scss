@@ -1,0 +1,117 @@
+.outstaffing {
+	background: #ffffff;
+	// .outstaffing__container
+
+	&__container {
+	}
+
+	// .outstaffing__title
+
+	&__title {
+		@include adaptiveValue('margin-bottom', 32, 16);
+	}
+
+	// .outstaffing__description
+
+	&__description {
+		@include adaptiveValue('margin-bottom', 60, 32);
+	}
+
+	// .outstaffing__list
+
+	&__list {
+		@include adaptiveValue('margin-bottom', 60, 32);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-between;
+		@include adaptiveValue('gap', 40, 10);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(1, 1fr);
+			justify-content: center;
+		}
+	}
+
+	// .outstaffing__button
+
+	&__button {
+	}
+}
+
+.outstaffing-card {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	@include adaptiveValue('padding-top', 35, 5);
+	@include adaptiveValue('padding-bottom', 35, 5);
+	&:not(:last-child) {
+		@include adaptiveValue('padding-right', 80, 20);
+		@media (min-width: rem(1280)) {
+			border-right: 2px solid #b7b7b7;
+		}
+		@media (max-width: rem(1280)) {
+			padding-right: 0;
+		}
+	}
+
+	@media (max-width: rem(1280)) {
+		border-bottom: 2px solid #b7b7b7;
+	}
+	@media (max-width: $tablet) {
+		padding-bottom: rem(32);
+	}
+
+	// .outstaffing-card__icon
+	&__icon {
+		display: inline-block;
+		@include adaptiveValue('margin-right', 32, 16);
+		padding: rem(20);
+		background: #f1f1f1;
+		border: 1px solid #b7b7b7;
+		border-radius: 50%;
+		box-shadow: 0px 100px 80px rgba(31, 80, 254, 0.014),
+			0px 64.8148px 46.8519px rgba(31, 80, 254, 0.019),
+			0px 38.5185px 25.4815px rgba(31, 80, 254, 0.022),
+			0px 20px 13px rgba(31, 80, 254, 0.025),
+			0px 8.14815px 6.51852px rgba(31, 80, 254, 0.028),
+			0px 1.85185px 3.14815px rgba(0, 0, 0, 0.03);
+		svg {
+			@include adaptiveValue('width', 60, 40);
+			@include adaptiveValue('height', 55, 40);
+		}
+
+		@media (max-width: rem(1280)) {
+			margin-right: rem(16);
+			padding: rem(18);
+
+			svg {
+				width: rem(40);
+				height: rem(40);
+			}
+		}
+	}
+
+	// .outstaffing-card__body
+
+	&__body {
+		max-width: rem(300);
+		@media (max-width: $tablet) {
+			max-width: 100%;
+		}
+	}
+
+	// .outstaffing-card__title
+
+	&__title {
+		margin-bottom: rem(15);
+		font-weight: 700;
+		@include adaptiveValue('font-size', 32, 18);
+		line-height: math.div(48, 32);
+	}
+
+	// .outstaffing-card__text
+
+	&__text {
+		@include adaptiveValue('font-size', 16, 12);
+		line-height: math.div(24, 16);
+	}
+}
