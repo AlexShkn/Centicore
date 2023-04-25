@@ -2,11 +2,15 @@
 	--color-main: #1a233b;
 	--color-accent: #1f50fe;
 
-	--radius: em(40);
+	--radius: 2.5em;
 
-	--offset: em(80)
-	--offset-bottom: em(180)
-	--section-margin: em(98)
+	--offset-3: 1.875rem;
+	--offset-4: 2.5em;
+	--offset-8: 5em;
+	--offset-bottom: 11.25em;
+	--section-margin: -6.125em;
 
-	--shadow:  drop-shadow(0px 100px 80px rgba(1, 101, 255, 0.07)) drop-shadow(0px 38.5185px 25.4815px rgba(1, 101, 255, 0.0425185)) drop-shadow(0px 8.14815px 6.51852px rgba(1, 101, 255, 0.0274815));
+	--shadow: drop-shadow(0px 100px 80px rgba(1, 101, 255, 0.07))
+		drop-shadow(0px 38.5185px 25.4815px rgba(1, 101, 255, 0.0425185))
+		drop-shadow(0px 8.14815px 6.51852px rgba(1, 101, 255, 0.0274815));
 }

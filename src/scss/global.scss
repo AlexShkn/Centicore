@@ -1,5 +1,7 @@
 .button {
 	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	transition: all 0.3s ease 0s;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -7,6 +9,11 @@
 	letter-spacing: 0.05em;
 	background-color: var(--color-accent);
 	color: #ffffff;
+	padding: rem(18) rem(10);
+
+	@media (max-width: rem(1280)) {
+		font-size: rem(14);
+	}
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -19,28 +26,35 @@
 	}
 
 	&--main {
-		padding: 18px em(152);
+		display: block;
+		margin: 0px auto;
+		max-width: rem(548);
+		width: 100%;
 	}
 	&--asymmetry {
 		border-radius: 8px 0px 8px 0px;
 	}
 	&--rounded {
-		padding: em(18) em(46);
 		border-radius: em(40);
 	}
 	&--right-min {
-		padding: 18px em(52);
 		border-radius: 0 em(40) em(40) 0px;
 	}
 	&--right-big {
-		padding: 18px em(76);
 		border-radius: 0 em(40) em(40) 0px;
 	}
 }
 
+.section-pt {
+	@include adaptiveValue('padding-top', 80, 32);
+}
+.section-pb {
+	@include adaptiveValue('padding-bottom', 175, 95);
+}
+
 .section-title {
 	font-weight: 700;
-	font-size: rem(50);
+	@include adaptiveValue('font-size', 50, 24);
 
 	&--darken {
 		color: var(--color-main);

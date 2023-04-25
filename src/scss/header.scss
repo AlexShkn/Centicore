@@ -6,15 +6,23 @@
 	z-index: 50;
 	transition: all 0.3s ease 0s;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: transparent;
+	@media (max-width: $mobile) {
+		background-color: #fff;
+	}
 
 	&__container {
 		position: relative;
 		display: flex;
 		align-items: center;
-		min-height: rem(110);
+		min-height: rem(109);
 		justify-content: space-between;
+		padding-right: rem(15);
+		padding-left: rem(15);
+		transition: all 0.3s ease 0s;
 		@media (max-width: rem(1280)) {
 			justify-content: stretch;
+			min-height: rem(84);
 		}
 
 		@media (max-width: $mobile) {
@@ -39,6 +47,9 @@
 		@media (max-width: rem(1440)) {
 			margin-right: rem(20);
 			min-width: 154px;
+		}
+		@media (max-width: 1280px) {
+			margin-right: rem(40);
 		}
 	}
 

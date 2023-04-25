@@ -1,3 +1,47 @@
+.text-block {
+	// .text-block__text
+
+	&__text {
+		font-size: rem(18);
+
+		line-height: math.div(27, 18);
+		color: var(--color-main);
+		&:not(:last-child) {
+			margin-bottom: var(--offset-4);
+			@media (max-width: $tablet) {
+				margin-bottom: var(--offset-3);
+			}
+		}
+
+		@media (max-width: rem(1440)) {
+			font-size: rem(14);
+		}
+	}
+}
+
+.description-block {
+	// .description-block__text
+
+	&__text {
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		color: var(--color-main);
+
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+		}
+		@media (max-width: rem(1440)) {
+			font-size: rem(16);
+		}
+		@media (max-width: rem(1280)) {
+			font-size: rem(14);
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+}
+
 //Scroll bar====================================================================================================
 
 /* Для WebKit-браузеров (Chrome, Safari, Opera) */
