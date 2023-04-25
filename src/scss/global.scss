@@ -1,0 +1,55 @@
+.button {
+	display: inline-flex;
+	transition: all 0.3s ease 0s;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0.05em;
+	background-color: var(--color-accent);
+	color: #ffffff;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #315efe;
+		}
+	}
+
+	&:active {
+		background-color: #3a65fe;
+	}
+
+	&--main {
+		padding: 18px em(152);
+	}
+	&--asymmetry {
+		border-radius: 8px 0px 8px 0px;
+	}
+	&--rounded {
+		padding: em(18) em(46);
+		border-radius: em(40);
+	}
+	&--right-min {
+		padding: 18px em(52);
+		border-radius: 0 em(40) em(40) 0px;
+	}
+	&--right-big {
+		padding: 18px em(76);
+		border-radius: 0 em(40) em(40) 0px;
+	}
+}
+
+.section-title {
+	font-weight: 700;
+	font-size: rem(50);
+
+	&--darken {
+		color: var(--color-main);
+	}
+
+	&--light {
+		color: #fff;
+	}
+}
+
+.section-subtitle {
+}

@@ -1,0 +1,283 @@
+.menu {
+	position: relative;
+	display: flex;
+	margin-right: rem(8);
+
+	&__body {
+		@media (max-width: rem(1280)) {
+			position: absolute;
+			width: 200px;
+			height: 300px;
+			left: 0;
+			top: 35px;
+			overflow: auto;
+			text-align: center;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			background-color: #fff;
+			border-radius: 8px;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease 0s;
+		}
+
+		@media (max-width: $mobile) {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding: rem(80) 0 rem(25) 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			&::after {
+				content: '';
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: rem(80);
+				background-color: #fff; // накладка на header
+				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		&._active {
+			opacity: 1;
+			visibility: visible;
+			z-index: 10;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: em(17);
+
+		@media (max-width: rem(1570)) {
+			gap: em(15);
+		}
+		@media (max-width: rem(1440)) {
+			gap: em(0);
+		}
+
+		@media (max-width: rem(1280)) {
+			display: inline-flex;
+			flex-direction: column;
+			gap: 0;
+			padding: rem(20);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+			align-items: flex-start;
+			padding: 0;
+			margin-bottom: em(25);
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+
+		&::before {
+			content: attr(data-title);
+			position: absolute;
+			inset: 0;
+			font-weight: 700;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			color: transparent;
+			transform: scale(0.9);
+			transform-origin: center center;
+			transition: transform 0.3s ease 0s;
+		}
+
+		@media (min-width: 1280px) {
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -33px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: rem(13);
+				height: rem(13);
+				background-color: transparent;
+				border-radius: 50%;
+				transform: scale(0.9);
+				transition: transform 0.3s ease 0s;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					background: #d9e2ff;
+					border-radius: em(60);
+					color: var(--color-main);
+					transform: scale(1);
+				}
+
+				&::after {
+					content: '';
+					background-color: var(--color-accent);
+					transform: scale(1);
+				}
+
+				a {
+					span {
+						color: transparent;
+					}
+				}
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					left: 0;
+				}
+			}
+		}
+		@media (max-width: rem(1280)) {
+			justify-content: center;
+		}
+
+		@media (max-width: $mobile) {
+			position: relative;
+			justify-content: flex-start;
+			padding: 12px 0;
+			width: 100%;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+			padding-left: 16px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		z-index: 10;
+		padding: 16px;
+
+		span {
+			font-size: 16px;
+			line-height: math.div(24, 16);
+			font-weight: 400;
+			color: var(--color-main); //ЦВЕТ ПУНКТОВ МЕНЮ
+			z-index: 2;
+			white-space: nowrap;
+
+			@media (max-width: rem(1280)) {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19px;
+			}
+
+			@media (max-width: rem(1440)) {
+				font-size: rem(14);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					color: var(--color-accent);
+				}
+			}
+		}
+
+		@media (max-width: rem(1570)) {
+			padding: 10px;
+		}
+
+		@media (max-width: $mobile) {
+			text-align: left;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			span {
+				display: inline-block;
+				text-align: center;
+				width: 100%;
+				max-width: 169px;
+				background: #d9e2ff;
+				border-radius: em(60);
+				padding: 12px 28px;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 28px;
+				width: 24px;
+				height: 24px;
+				background: url('@img/icons/arrow-right.svg') center / cover no-repeat;
+			}
+		}
+	}
+}
+.icon-menu {
+	position: relative;
+	display: none;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -15px;
+		background: #d9e2ff;
+		border-radius: 20px;
+	}
+	@media (max-width: 1280px) {
+		display: block;
+		position: relative;
+		margin-right: auto;
+		right: 8px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 22px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 11;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			border-radius: 25px;
+			background-color: #323232; // цвет бургера
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				background-color: #000;
+
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+
+	@media (max-width: $mobile) {
+		position: absolute;
+		right: 30px;
+	}
+}
