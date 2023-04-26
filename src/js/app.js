@@ -85,7 +85,7 @@ import './components/Page/goToTopButton.js'
 
 //=================================TABS===============================
 // Tabs
-// import './components/tabs.js'
+import './components/tabs.js'
 //====================================================================
 
 //================================DropDown============================
@@ -114,7 +114,7 @@ import './components/Page/goToTopButton.js'
 
 //===========================SPOLLER==================================
 //Spoller
-// import './components/Spollers/spoller.js'
+import './components/Spollers/spoller.js'
 //--------------------------------------------------------------------
 // import './components/Spollers/spollerCustom.js'
 //====================================================================

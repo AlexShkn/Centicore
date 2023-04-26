@@ -1,4 +1,4 @@
-import { _slideDown, _slideUp } from '../../functions.js'
+import { _slideDown, _slideUp } from './../functions.js'
 
 /*
 Для родителя табов пишем атрибут data-tabs

@@ -47,6 +47,9 @@ $responsiveType: 1;
 //</ОБНУЛЕНИЕ>==================================
 
 //<ОБОЛОЧКА>=====================================================
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-weight: 400;
@@ -148,6 +151,7 @@ body {
 @import './parts/outstaffing';
 @import './parts/development';
 @import './parts/solutions';
+@import './parts/projects';
 //===========MAIN===============================================
 @import 'footer';
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==============
