@@ -10,7 +10,7 @@
 	@include adaptiveValue('padding-bottom', 175, 95);
 
 	@media (max-width: $mobileSmall) {
-		padding-bottom: rem(15);
+		padding-bottom: rem(55);
 	}
 	// .partners__container
 
@@ -80,6 +80,18 @@
 		@media (max-width: rem(1280)) {
 			width: rem(120);
 			height: rem(120);
+		}
+		@media (max-width: rem(1280)) {
+			width: rem(120);
+			height: rem(120);
+		}
+		@media (max-width: $mobile) {
+			width: rem(100);
+			height: rem(100);
+		}
+		@media (max-width: rem(375)) {
+			width: rem(80);
+			height: rem(80);
 		}
 	}
 

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-	if (window.innerWidth > 479.98) {
-		const partnersSlider = new Swiper('.partners-slider', {
+	let partnersSlider
+
+	function sliderInit() {
+		partnersSlider = new Swiper('.partners-slider', {
 			spaceBetween: 89,
 			slidesPerView: 6,
 
@@ -12,10 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			breakpoints: {
 				480: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 23,
 				},
-				620: {
+				550: {
 					slidesPerView: 4,
+					spaceBetween: 23,
+				},
+				640: {
+					slidesPerView: 5,
 					spaceBetween: 23,
 				},
 				768: {
@@ -34,6 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		})
 	}
+	if (window.innerWidth > 479.98) {
+		sliderInit()
+	}
+
+	window.addEventListener('resize', () => {
+		if (window.innerWidth < 480) {
+			if (partnersSlider) {
+				partnersSlider.destroy()
+				partnersSlider = null
+			}
+		} else if (window.innerWidth > 480 && !partnersSlider) {
+			sliderInit()
+		}
+	})
 })
 
 //====================================================================

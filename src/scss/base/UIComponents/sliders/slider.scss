@@ -4,6 +4,10 @@
 	@media (max-width: $tablet) {
 		padding-left: rem(10);
 	}
+
+	@media (max-width: $mobileSmall) {
+		padding: 0;
+	}
 }
 
 .partners-slider-wrapper {
@@ -14,8 +18,13 @@
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: rem(21);
 		row-gap: rem(24);
-		padding-bottom: 80px;
+		padding-bottom: 40px;
 	}
+
+	// @media (max-width: rem(375)) {
+	// 	grid-template-columns: repeat(2, 1fr);
+	// 	justify-content: center;
+	// }
 }
 
 .partners-slider-buttons {
