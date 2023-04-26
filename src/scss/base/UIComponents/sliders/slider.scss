@@ -1,65 +1,85 @@
-.main {
-	padding: clamp(1.875rem, -0.489rem + 11.82vw, 10rem) 0;
-
-	// .main__slider
-	&__slider {
-		margin-top: 40px;
-		position: relative;
-	}
-}
-
-.main-slide {
-	display: flex;
-	flex-direction: column;
-	gap: 27px;
-	@media (max-width: 660px) {
-		text-align: center;
-	}
-}
-
-.swiper {
+.partners-slider {
 	overflow: hidden;
-}
-.swiper-wrapper {
-	display: inline-flex;
-}
-.swiper-slide {
-}
-.slider-buttons {
-	position: absolute;
-	top: 30%;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	@media (max-width: 1800px) {
-		top: -100px;
-		right: 0;
-		width: auto;
-		gap: 30px;
+	padding: 0 rem(20);
+	@media (max-width: $tablet) {
+		padding-left: rem(10);
 	}
 }
-.main-slider-prev {
+
+.partners-slider-wrapper {
+	display: inline-flex;
+	align-items: center;
+	@media (max-width: $mobileSmall) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: rem(21);
+		row-gap: rem(24);
+		padding-bottom: 80px;
+	}
+}
+
+.partners-slider-buttons {
 	position: absolute;
-	left: -10%;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-flex;
+	flex-direction: column;
+	gap: rem(50);
+	@media (max-width: $mobileSmall) {
+		display: none;
+	}
+}
+
+.partners-slider-prev {
 	transform: rotate(180deg);
 }
-.main-slider-next {
-	position: absolute;
-	right: -10%;
+.partners-slider-next {
 }
-.main-slider-btn {
+.partners-slider-btn {
+	position: relative;
 	display: flex;
 	align-items: center;
-	width: 78px;
-	height: 78px;
+	justify-content: center;
+	width: rem(65);
+	height: rem(65);
 	border-radius: 50%;
-	background: url('../img/icons/arrow-slider.svg') left 30px center no-repeat;
-	border: 1px solid #fff;
+	background-color: var(--color-accent);
+	border: 1px solid #cfcfcf;
 	cursor: pointer;
-	@media (max-width: 1800px) {
-		position: static;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 55%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: rem(12) 0 rem(12) rem(16);
+		border-color: transparent transparent transparent #fff;
 	}
-	@media (max-width: 660px) {
-		display: none;
+
+	&.swiper-button-disabled {
+		background: #f1f1f1;
+		border: 1px solid #cfcfcf;
+		pointer-events: none;
+		&::before {
+			content: '';
+			border-color: transparent transparent transparent #cfcfcf;
+		}
+	}
+
+	@media (max-width: rem(1920)) {
+		width: rem(48);
+		height: rem(48);
+		&::before {
+			border-width: rem(9) 0 rem(9) rem(12);
+		}
+	}
+	@media (max-width: rem(1440)) {
+		width: rem(40);
+		height: rem(40);
+		&::before {
+			border-width: rem(7.5) 0 rem(7.5) rem(10);
+		}
 	}
 }

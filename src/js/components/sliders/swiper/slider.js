@@ -1,41 +1,39 @@
-const heroSlider = new Swiper('.hero-slider', {
-	spaceBetween: 28,
-	slidesPerView: 1,
-	loop: true,
-	speed: 800,
+document.addEventListener('DOMContentLoaded', () => {
+	if (window.innerWidth > 479.98) {
+		const partnersSlider = new Swiper('.partners-slider', {
+			spaceBetween: 89,
+			slidesPerView: 6,
 
-	loopAdditionalSlides: 0,
-	preventInteractionOnTransition: true,
-	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
-	},
+			// Arrows
+			navigation: {
+				nextEl: '.partners-slider-next',
+				prevEl: '.partners-slider-prev',
+			},
+			breakpoints: {
+				480: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				620: {
+					slidesPerView: 4,
+					spaceBetween: 23,
+				},
+				768: {
+					slidesPerView: 5,
+					spaceBetween: 35,
+				},
 
-	//	Dotts
-	pagination: {
-		el: '.hero-slider__pagination',
-		clickable: true,
-		type: 'bullets',
-		renderBullet: (index, className) => {
-			return (
-				'<span class="' +
-				className +
-				'"><svg class="circle" width="24" height="24" viewBox="0 0 60 60"><circle class="circle2" cx="34" cy="34" r="12" stroke="#27ACE2" stroke-width="8" fill="none"/><circle class="circle1" cx="34" cy="34" r="12" stroke="#0060AA" stroke-width="8" fill="none"/></svg></span>'
-			)
-		},
-	},
-
-	on: {
-		init() {
-			this.el.addEventListener('mouseenter', () => {
-				this.autoplay.stop()
-			})
-
-			this.el.addEventListener('mouseleave', () => {
-				this.autoplay.start()
-			})
-		},
-	},
+				1280: {
+					slidesPerView: 6,
+					spaceBetween: 73,
+				},
+				1920: {
+					slidesPerView: 6,
+					spaceBetween: 89,
+				},
+			},
+		})
+	}
 })
 
 //====================================================================

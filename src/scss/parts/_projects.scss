@@ -16,7 +16,7 @@
 
 	// .projects__circle-left
 
-	&__circle-left {
+	&__circle-right {
 		position: absolute;
 		top: -8%;
 		right: -10%;
@@ -66,9 +66,9 @@
 
 	// .projects__circle-right
 
-	&__circle-right {
+	&__circle-left {
 		position: absolute;
-		top: 110%;
+		top: 90%;
 		left: -12%;
 		width: rem(668);
 		height: rem(668);
@@ -86,23 +86,19 @@
 		}
 
 		@media (max-width: rem(1440)) {
-			left: -25%;
-			top: 100%;
+			left: -20%;
+			top: 80%;
 		}
 
 		@media (max-width: rem(1280)) {
 			width: rem(410);
 			height: rem(410);
-			left: -5%;
-			top: 120%;
+			left: -8%;
+			top: 100%;
 			&::before {
 				width: rem(14);
 				height: rem(14);
 			}
-		}
-
-		@media (max-width: $tablet) {
-			top: 110%;
 		}
 
 		@media (max-width: $mobile) {

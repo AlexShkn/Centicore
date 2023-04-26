@@ -56,8 +56,8 @@ import './components/Page/goToTopButton.js'
 //=============================SLIDERS================================
 //====================================================================
 // Swiper
-// import './libs/swiper.js'
-// import './components/sliders/swiper/slider.js'
+import './libs/swiper.js'
+import './components/sliders/swiper/slider.js'
 // import './components/sliders/swiper/gallery.js'
 //--------------------------------------------------------------------
 //Custom singleSlider
