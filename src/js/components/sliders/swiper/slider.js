@@ -45,11 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	window.addEventListener('resize', () => {
-		if (window.innerWidth < 480) {
-			if (partnersSlider) {
-				partnersSlider.destroy()
-				partnersSlider = null
-			}
+		if (window.innerWidth < 480 && partnersSlider) {
+			partnersSlider.destroy()
+			partnersSlider = null
 		} else if (window.innerWidth > 480 && !partnersSlider) {
 			sliderInit()
 		}

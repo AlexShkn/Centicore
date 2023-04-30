@@ -49,13 +49,11 @@
 }
 
 ::-webkit-scrollbar-track {
-	background: #0b0245;
-	border-radius: 4px;
+	background: #cfcfcf;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #3a926591;
-	border-radius: 4px;
+	background: #1f50fe;
 }
 
 /* Для Firefox */
@@ -64,13 +62,11 @@
 }
 
 ::-moz-scrollbar-track {
-	background: #0b0245;
-	border-radius: 4px;
+	background: #cfcfcf;
 }
 
 ::-moz-scrollbar-thumb {
-	background: #3a926591;
-	border-radius: 4px;
+	background: #1f50fe;
 }
 
 /* Для Internet Explorer и Edge */
@@ -79,11 +75,9 @@
 }
 
 ::-ms-scrollbar-track {
-	background: #0b0245;
-	border-radius: 4px;
+	background: #cfcfcf;
 }
 
 ::-ms-scrollbar-thumb {
-	background: #3a926591;
-	border-radius: 4px;
+	background: #1f50fe;
 }
