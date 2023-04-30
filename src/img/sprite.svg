@@ -2,8 +2,8 @@
  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10" id="check">
     <path d="M13 1L4.75 9 1 5.364" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" id="arrow-top">
-    <path d="M10 21.6671V4.13374L1.73337 12.4004L0.333374 11.0004L11 0.33374L21.6667 11.0004L20.2667 12.4004L12 4.13374V21.6671H10Z" fill="#1F50FE"></path>
+  <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" id="arrow-top">
+    <path d="M10 21.6671V4.13374L1.73337 12.4004L0.333374 11.0004L11 0.33374L21.6667 11.0004L20.2667 12.4004L12 4.13374V21.6671H10Z"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="blank">
     <path d="M2.725 19.6251C2.075 19.6251 1.52083 19.3959 1.0625 18.9376C0.604167 18.4793 0.375 17.9251 0.375 17.2751V2.7251C0.375 2.0751 0.604167 1.51676 1.0625 1.0501C1.52083 0.583431 2.075 0.350098 2.725 0.350098H9.475V2.7251H2.725V17.2751H17.275V10.5251H19.65V17.2751C19.65 17.9251 19.4167 18.4793 18.95 18.9376C18.4833 19.3959 17.925 19.6251 17.275 19.6251H2.725ZM8.125 13.5251L6.5 11.8751L15.65 2.7251H10.975V0.350098H19.65V9.0251H17.275V4.3751L8.125 13.5251Z" fill="#1F50FE"></path>
