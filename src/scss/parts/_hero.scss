@@ -11,7 +11,7 @@
 		@include adaptiveValue('padding-top', 185, 110);
 		@include adaptiveValue('padding-bottom', 185, 110);
 		display: flex;
-		@include adaptiveValue('gap', 70, 40);
+		justify-content: space-between;
 
 		@media (max-width: $tablet) {
 			flex-direction: column;
@@ -22,10 +22,13 @@
 	// .hero__content
 
 	&__content {
+		@include adaptiveValue('margin-right', 70, 40);
 		max-width: percent(900, 1750);
 		@media (max-width: $tablet) {
 			width: 100%;
 			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: rem(40);
 		}
 	}
 

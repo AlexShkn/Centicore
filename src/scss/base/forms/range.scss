@@ -33,15 +33,41 @@
 		}
 	}
 
+	// .range-slider__message
+
+	&__message {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: -64px;
+		left: -1.5%;
+		width: 34px;
+		height: 34px;
+		border-radius: 0 50% 50% 50%;
+		transform: rotate(225deg);
+		background-color: var(--color-accent);
+		span {
+			transform: rotate(135deg);
+			font-weight: 500;
+			font-size: 12px;
+			letter-spacing: 0.5px;
+			color: #ffffff;
+		}
+
+		@media (max-width: $mobile) {
+			display: inline-flex;
+		}
+	}
+
 	// .range-slider__dots
 
 	&__dots {
 		position: absolute;
 		left: 0;
-		top: 60%;
-		transform: translateY(-50%);
+		bottom: -4px;
 		display: inline-flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		width: 100%;
 		z-index: 1;
@@ -63,40 +89,10 @@
 					font-size: rem(12);
 				}
 				@media (max-width: $tablet) {
-					display: none;
+					visibility: hidden;
+					opacity: 0;
 				}
 			}
 		}
 	}
-
-	// .range-slider__months
-
-	// &__months {
-	// 	display: inline-flex;
-	// 	width: 100%;
-
-	// 	// 996
-
-	// 	// span {
-	// 	// 	position: relative;
-	// 	// 	&:nth-child(1) {
-	// 	// 		left: 9%;
-	// 	// 	}
-	// 	// 	&:nth-child(2) {
-	// 	// 		left: percent(177, 996);
-	// 	// 	}
-	// 	// 	&:nth-child(3) {
-	// 	// 		left: 26.5%;
-	// 	// 	}
-	// 	// 	&:nth-child(4) {
-	// 	// 		left: 36.2%;
-	// 	// 	}
-	// 	// 	&:nth-child(5) {
-	// 	// 		left: 59%;
-	// 	// 	}
-	// 	// 	&:nth-child(6) {
-	// 	// 		left: 70.5%;
-	// 	// 	}
-	// 	// }
-	// }
 }

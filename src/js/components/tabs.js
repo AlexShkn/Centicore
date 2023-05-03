@@ -147,14 +147,14 @@ export function tabs() {
 					if (tabsBlockAnimate) {
 						_slideDown(tabsContentItem, tabsBlockAnimate)
 					} else {
-						tabsContentItem.hidden = false
+						tabsContentItem.classList.add('tabs__content_active')
 					}
 					location.hash = `tab-${tabsBlockIndex}-${index}`
 				} else {
 					if (tabsBlockAnimate) {
 						_slideUp(tabsContentItem, tabsBlockAnimate)
 					} else {
-						tabsContentItem.hidden = true
+						tabsContentItem.classList.remove('tabs__content_active')
 					}
 				}
 			})

@@ -7,27 +7,42 @@
 					</use>
 				</svg>
 			</a>
-			<h3 class="modal-callback__title modal__title">Заказать расчет</h3>
-			<form class="modal-callback__form modal-callback-form modal-form">
-				<label class="callback-form__field">
-					<input type="text" name="name" class="callback-form__input modal-form__input" placeholder="Ваше имя">
-				</label>
-				<label class="callback-form__field">
-					<input autocomplete="off" type="tel" name="phone" data-value="Телефон"
-						class="callback-form__input modal-form__input" placeholder="Номер телефона">
-				</label>
-				<label class="callback-form__field">
-					<input type="email" name="email" class="callback-form__input modal-form__input" placeholder="E-mail">
-				</label>
-				<label class="checkbox callback-form__checkbox">
-					<input data-error="Ошибка" class="checkbox__input" type="checkbox">
-					<span class="checkbox__text callback-form__checkbox-text">
-						<span>Я согласен(на) на обработку<a href="#">персональных данных</a>
-						</span>
-					</span>
-				</label>
-				<button data-btn-close type="submit" class="callback-form__button modal-form__button">Заказать расчет</button>
-			</form>
+
+			<div class="modal-callback__form-block">
+				<form data-form class="modal__form modal-form">
+					<h2 class="modal-form__title">Запланировать консультацию</h2>
+					<p class="modal-form__description">Заполните форму внизу, чтобы запланировать бесплатную консультацию с целью
+						понять, как Centicore Group может
+						помочь Вашему бизнесу вырасти.</p>
+					<div class="form-control">
+						<label for="username">Имя</label>
+						<input data-form-username type="text" id="username" name="Имя" placeholder="Ваше имя">
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<label for="telephone">Телефон</label>
+						<input data-form-phone type="tel" id="telephone" name="телефон" placeholder="Введите ваш телефон">
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<label for="email">Email</label>
+						<input data-form-email type="text" id="email" name="email" placeholder="Ваш email">
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<label for="password">Пароль</label>
+						<input type="password" id="password" placeholder="Введите пароль">
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<label for="password2">Пароль еще раз</label>
+						<input type="password" id="password2" placeholder="Введите пароль еще раз">
+						<small>Error Message</small>
+					</div>
+					<button type="submit">Отправить</button>
+				</form>
+			</div>
+
 		</div>
 	</div>
 </div>

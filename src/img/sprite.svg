@@ -1,4 +1,7 @@
 <svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="label">
+    <path d="M72 40.9286H61.2857C61.2857 24.2417 47.7583 10.7143 31.0714 10.7143V0C53.6756 0 72 18.3244 72 40.9286ZM31.0714 10.7143V21.4286C19.8285 21.4286 10.7143 30.5428 10.7143 41.7857H0C0 24.6255 13.9112 10.7143 31.0714 10.7143ZM30.2143 72V61.2857C41.4573 61.2857 50.5714 52.1716 50.5714 40.9286H61.2857C61.2857 58.089 47.3746 72 30.2143 72ZM10.7143 41.7857H21.4286C21.4286 47.1106 24.888 50.5693 30.2143 50.5693V61.2836C18.9711 61.2836 10.7143 53.0285 10.7143 41.7857Z" fill="#1F50FE"></path>
+  </symbol>
  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 10" id="check">
     <path d="M13 1L4.75 9 1 5.364" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
